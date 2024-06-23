@@ -1,0 +1,742 @@
+body {
+  background-color: rgb(233, 241, 240);
+  zoom : 85%
+}
+
+.body {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 50%;
+
+  transform: scale(1.5, 10);
+}
+.body:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 30px;
+  background-color: #95a4dc;
+  right: -50%;
+  top: 23;
+}
+
+.body:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color:#9dcadb;
+  left: -25%;
+  top: -255px;
+  clip-path: ellipse(100% 15% at -15% 100%);
+}
+
+#main {
+  width: 35%;
+  height: 700px;
+  margin: 5% auto;
+  border-radius: 4%;
+  background-color: white;
+  border: 2px solid rgb(90, 83, 83);
+  position: relative;
+}
+
+#login {
+  width: 85%;
+  height: 80%;
+  margin: 5% auto;
+}
+
+#login .plogin {
+  font-size: 36px;
+  line-height: 1.125;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#login label {
+  letter-spacing: 0.02em;
+  font-size: 15px;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 200;
+  margin-top: 30px;
+}
+
+.input {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  border: 2px solid rgb(149, 140, 140);
+  border-radius: 12px;
+  margin-top: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 200;
+}
+
+#loginbtn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  color: #fff;
+  border: 3px solid grey;
+  width: 80%;
+  height: 50px;
+  background-image: linear-gradient(to right, #706e9c, #33514d);
+  font-weight: 500;
+  margin: 10%;
+}
+
+#nameErr {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  display: none;
+}
+#emailErr {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  display: none;
+}
+#passErr {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  display: none;
+}
+#reqErr {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  display: none;
+}
+#passConErr {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  display: none;
+}
+
+#homeBody {
+  background-color: #9dcadb;
+  display: inline;
+}
+.wave {
+  position: relative;
+  height: 40px;
+  width: 800px;
+  background-color: #95a4dc;
+  transform: scale(2, 4);
+}
+
+.wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  right: -25%;
+  top: 20px;
+}
+
+.wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  width: 100%;
+  height: 300px;
+  background-color: #788483;
+  left: -25%;
+  top: -240px;
+  clip-path: ellipse(100% 15% at -15% 100%);
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styles for the "Go to Top" button */
+#topBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* 20px from the bottom */
+  right: 30px; /* 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background: linear-gradient(
+    45deg,
+    #28c397,
+    #254f2c
+  ); /* Gradient background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+#topBtn:hover {
+  background: linear-gradient(
+    45deg,
+    #04250e,
+    #375643
+  ); /* Slight color change on hover */
+  transform: scale(1.1); /* Slightly larger on hover */
+}
+
+#topBtn svg {
+  vertical-align: middle;
+}
+
+.homeMain {
+  position: absolute;
+  width: 100%;
+}
+
+.header {
+  height: 80px;
+  width: 95%;
+  border: 3px solid rgb(65, 60, 60);
+  margin-left: 30px;
+  background-color: rgb(255, 255, 255);
+  position: static;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  font-weight: 350;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  border-radius: 15px;
+}
+
+#shopname{
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
+}
+
+#navBar {
+  margin-top: 50px;
+  height: 600px;
+  width: 22%;
+  margin-left: 30px;
+  border: 3px solid rgb(65, 60, 60);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+#pClothes {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  border: 3px solid rgb(65, 60, 60);
+  background-color: #e3e7ed;
+  border-radius: 5px;
+  letter-spacing: 2px;
+ 
+}
+
+
+
+#slider {
+  margin-top: 50px;
+  height: 900px;
+  width: 71%;
+  margin-left: 30px;
+  border: 5px solid rgb(65, 60, 60);
+  border-radius: 10px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  border: 1px dotted rgb(65, 60, 60);
+  height: 24.6%;
+
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-left: 20%;
+  font-weight: 350;
+  font-size: 19px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: rgb(20, 19, 19);
+}
+
+
+#clothesImg {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#slider div {
+  position: absolute;
+  top: 90%;
+}
+
+#sliderDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: auto;
+}
+
+#sliderDiv button {
+  width: 100px;
+  height: 60px;
+  font-size: 22px;
+  background-color: #fff;
+  border: 2px solid #1b4f48;
+  color: #1b4f48;
+  align-items: center;
+  text-align: center;
+  opacity: 75%;
+  border-radius: 20%;
+}
+
+.centered {
+  height: 1200px;
+  width: 95%;
+  border-radius: 1.5%;
+  background-color: rgb(243, 248, 248);
+  margin: 30px auto;
+  display: grid;
+  border: 2px solid rgb(65, 60, 60);
+}
+
+#productsCenter  {
+  height: auto;
+}
+
+.centered .centerdiv {
+  width: 200px;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 35px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  display: block;
+  letter-spacing: 3.5px;
+}
+
+.centerProd {
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.centerProd img {
+  width: 250px;
+  height: 350px;
+  border: 4px solid rgb(117, 111, 111);
+  border-radius: 30px;
+  margin-top: 100px;
+}
+
+.centerProd p{
+  font-size: 23px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  letter-spacing: 0.12em;
+
+
+}
+
+.productInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  max-width: 320px;
+}
+
+.product-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-details {
+  margin-top: 10px;
+  
+}
+
+.product-details h3 {
+  font-size: 1.2em;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  letter-spacing: 0.09em;
+  margin: 10px 0;
+}
+
+.product-details p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.btn.buy-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn.buy-btn:hover {
+  background-color: #45a049;
+}
+
+.productInfo img {
+  
+  width: 300px;
+  height: 500px;
+  border: 4px solid rgb(117, 111, 111);
+  border-radius: 30px;
+}
+/* //-- */
+#productShowInfo {
+  width: 90%;
+  height: 95%;
+  margin: auto;
+
+}
+
+.productShowCard {
+
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.productShowDetails {
+  margin-top: 10px;
+}
+
+.productShowDetails h3 {
+  font-size: 40px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  letter-spacing: 0.15em;
+
+}
+
+.productShowDetails h4 {
+  font-size: 20px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  letter-spacing: 0.15em;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.productShowDetails p {
+  font-size: 30px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  letter-spacing: 0.09em;
+
+}
+
+#Show-btnBuy-btn{
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 300px;
+  font-size: 20px;
+  font-family: -BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+}
+
+#Show-btnBuy-btn:hover {
+  background-color: #45a049;
+}
+
+.productShowCard img {
+ height: 900px;
+ width: 600px;
+ border: 3px solid grey;
+ border-radius: 7px;
+ margin: auto;
+ align-items: center;
+
+}
+
+#productsShow{
+  height: 1000px;
+}
+
+.centerContainer {
+  width: 100%;
+
+  height: 500px;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+}
+
+.innercont {
+
+  height: 50%;
+  width: 300px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+}
+.innercont p {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.08em;
+    font-size: 16px;
+}
+
+.innerheads {
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 550;
+  letter-spacing: 0.13em;
+}
+
+.innercont img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+
+
+.centerContainer2 {
+  width: 94.5%;
+  height: 450px;
+ padding-left: 70px;
+ padding-top: 20px;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 10px;
+ 
+  background-color: rgb(243, 248, 248);
+  flex-direction: row;
+}
+
+.centerContainer2 .innercont {
+  width: 500px;
+  color: #222121;
+  font-size: 16px;
+  font-weight: 600;
+}
+.centerContainer2 h4{
+  
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.2em;
+  
+}
+
+.centerContainer2 h3{
+  
+
+  
+  letter-spacing: 0.3em;
+  margin-top: 60px;
+}
+
+.centerContainer2 p, .centerContainer2 a{
+  
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  width: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.spacebet {
+  display: flexbox;
+  justify-content: space-around;
+}
+
+.btn {
+  font-size: 15px;
+  text-align: center;
+  width: 70px;
+  border: 2px solid rgb(117, 111, 111);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+#CartCenter {
+  display: block;
+  position: relative;
+}
+
+#cartProd {
+  display: grid;
+  margin-left: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  position: relative;
+}
+
+#slide-y {
+  border-radius: 20px;
+  width: 98%;
+  height: 75%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.addCart {
+  background-color: #36cd70;
+  color: white;
+  border: 3px solid rgb(117, 111, 111);
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  height: 44px;
+  width: 100px;
+  font-size: 20px;
+}
+
+.removeCart {
+  background-color: #ff1f1f;
+  color: white;
+  border: 3px solid rgb(117, 111, 111);
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  height: 44px;
+  width: 100px;
+  font-size: 20px;
+}
+
+#totaldiv {
+  display: flex;
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  margin: auto;
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 350;
+  justify-content: space-around;
+}
+
+#totalPricediv {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+#buyAll {
+  width: 250px;
+  height: 40px;
+  background-color: #2c6544;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  border: 3px solid rgb(117, 111, 111);
+}
+
+#buyAll:hover{
+  background-color: #369a47;
+
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+
+.item-info {
+  flex: 1;
+  font-size: 18px;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.05em;
+  
+}
+
+.item-image img {
+  max-width: 160px;
+  height: auto;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body id="homeBody">
+
+    <div class="wave"></div>
+    <div class="homeMain">
+      <div class="header">
+        <p id="shopname">SHOP-SMARTLY</p>
+        <a href="./Home.html">HOME</a>
+        <a href="#aboutTarget">ABOUT</a>
+        <a href="#contactTarget">CONTACT US</a>
+        <a id="welcome" >WELCOME ,</a>
+        <a href="#" onclick="LogOut()">LOG OUT</a>
+      </div>
+      <div class="flex">
+      <div id="navBar">
+        <div class="container" id="pClothes" >CLOTHES</div>
+        <a class="container" href="./products.html" onclick="men_category()" >MEN</a>
+        <a class="container" href="./products.html" onclick="women_category()" >WOMEN</a>
+        <a class="container" href="./products.html" onclick="kids_category()" >KIDS</a>
+
+
+    </div>
+    <div id="slider" >
+        <img id="clothesImg" src="https://static.zara.net/assets/public/8890/366a/0b2b4616b053/e6f41c6ecd5e/image-landscape-fill-78952c92-2602-47b9-8493-966918c57927-default_0.jpg?ts=1718367361892&w=1869" alt="" >
+        <div id="sliderDiv">
+
+                <button onclick="next()">
+                    <<
+                </button>
+                <button onclick="back()">
+                    >>
+                </button>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="centered">
+      <div class="centerdiv">
+        Products.
+      </div>
+      <div class="centerProd">
+        <a href="./products.html" onclick="men_category()">
+          <img src="./assets/men.avif" alt="">
+          <p>MEN</p>
+        </a>
+        <a href="./products.html" onclick="women_category()" >
+          <img src="./assets/women.webp" alt="">
+          <p>WOMEN</p>
+        </a>
+        <a href="./products.html" onclick="kids_category()" >
+          <img src="./assets/kids.webp" alt="">
+          <p>KIDS</p>
+        </a>
+        
+        
+    </div>
+    <div class="centerContainer">
+      <div></div>
+      <div class="innercont">
+        <img src="./assets/credit.jpg" alt="">
+        <p class="innerheads">CREDIT CARD</p>
+        <p> Credit cards allow you to charge purchases up to your credit limit and make at least the minimum monthly payment</p>
+      </div>
+      <div class="innercont">
+        <img src="./assets/wallet.jpg" alt="">
+        <p class="innerheads">SAVE MONEY</p>
+        <p> Easy to compare products: Instead of going from store to store ,This makes it easier to make informed purchases. Shop from anywhere</p>
+      </div>
+      <div class="innercont">
+        <img src="./assets/delivery.avif" alt="">
+        <p class="innerheads">FREE DELIVERY</p>
+        <p> Items are delivered door-to-door that guarantees the goods will be picked up from and delivered to the locations decided by the customers without any fees</p>
+      </div>
+     
+    </div>
+    </div>
+    <div>
+      <div class="centerContainer2">
+        <h4>SIGN UP FOR 10% OFF</h4>
+        <h3  id="aboutTarget">ABOUT US</h3>
+        <p> Welcome to ShopSmartly, your top destination for quality fashion, electronics, and home goods. Founded in 2018, we are committed to providing a seamless online shopping experience with exceptional customer service and eco-friendly practices. Shop with us for the best products at unbeatable prices!</p>
+        <h3 id="contactTarget">CONTACT US</h3>
+        <p> 198 West 21th Street,721 New York NY 10016</p>
+        <p> NUMBER  : + 1235 2355 98</p>
+        <a href="www.info@yoursite.com">info@yoursite.com</a>
+        
+  
+        
+        </div> 
+       
+       
+   </div>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12l-8-8-8 8z"/>
+      </svg>
+  </button>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>

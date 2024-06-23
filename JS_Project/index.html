@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="body">
+    </div>
+
+    <div id="main" > 
+        
+        <div id="login">
+            <p class="plogin">Login</p>
+            <label>
+                Name
+            </label>
+            <input class ="input" type="text" value="" placeholder="Alex.."> 
+            <p id="nameErr">-Name must be only letters</p>
+            <label >Email</label>
+            <input class ="input" type="text" value="" placeholder="Alex123@gmail.com"> 
+            <p id="emailErr">-Please enter a valid email</p>
+
+            <label >Password</label>
+            <input class ="input" type="password" value="" placeholder="*********"> 
+            <p id="passErr">-Password must be at least 8 characters</p>
+            <div>
+            <label >Confirm Password</label>
+            <input class ="input" type="password" value="" placeholder="*********"> 
+            <p id="passConErr">-Password don't match</p>
+            <div>
+                
+            <p id="reqErr"> -All fields are required</p>
+            </div>
+            
+            
+        </div>
+        <div>
+            <button id="loginbtn" onclick="login()">LOGIN</button>
+        </div>
+</div>
+    <script src="./demo.js"></script>
+</body>
+</html>
